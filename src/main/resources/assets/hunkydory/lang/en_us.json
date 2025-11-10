@@ -1,0 +1,13 @@
+{
+  "itemGroup.hunkydory": "Example Mod Tab",
+  "block.hunkydory.example_block": "Example Block",
+  "item.hunkydory.example_item": "Example Item",
+
+  "hunkydory.configuration.title": "hunky-dory Configs",
+  "hunkydory.configuration.section.hunkydory.common.toml": "hunky-dory Configs",
+  "hunkydory.configuration.section.hunkydory.common.toml.title": "hunky-dory Configs",
+  "hunkydory.configuration.items": "Item List",
+  "hunkydory.configuration.logDirtBlock": "Log Dirt Block",
+  "hunkydory.configuration.magicNumberIntroduction": "Magic Number Text",
+  "hunkydory.configuration.magicNumber": "Magic Number"
+}
