@@ -1,7 +1,9 @@
 {
   "itemGroup.hunkydory": "Example Mod Tab",
+
   "block.hunkydory.example_block": "Example Block",
-  "item.hunkydory.example_item": "Example Item",
+
+  "item.hunkydory.osmium_crystal": "Osmium Crystal",
 
   "hunkydory.configuration.title": "hunky-dory Configs",
   "hunkydory.configuration.section.hunkydory.common.toml": "hunky-dory Configs",
