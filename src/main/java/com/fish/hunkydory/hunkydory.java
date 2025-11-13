@@ -1,5 +1,6 @@
 package com.fish.hunkydory;
 
+import com.fish.hunkydory.block.ModBlocks;
 import com.fish.hunkydory.item.ModItems;
 import org.slf4j.Logger;
 
@@ -52,6 +53,7 @@ public class hunkydory {
         NeoForge.EVENT_BUS.register(this);
 
         ModItems.ITEMS.register(modEventBus);
+        ModBlocks.BLOCKS.register(modEventBus);
 
         // Register the item to a creative tab
         modEventBus.addListener(this::addCreative);
@@ -69,6 +71,17 @@ public class hunkydory {
         if(event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
             event.accept(ModItems.OSMIUM_CRYSTAL);
             event.accept(ModItems.RAW_OSMIUM);
+        }
+
+        if(event.getTabKey() == CreativeModeTabs.NATURAL_BLOCKS) {
+            event.accept(ModBlocks.STRATUS);
+            event.accept(ModBlocks.SMOOTH_STRATUS);
+        }
+
+        if(event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS) {
+            event.accept(ModBlocks.SMOOTH_STRATUS);
+            event.accept(ModBlocks.POLISHED_STRATUS);
+            event.accept(ModBlocks.STRATUS_BRICKS);
         }
     }
 

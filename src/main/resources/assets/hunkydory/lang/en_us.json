@@ -1,7 +1,10 @@
 {
   "itemGroup.hunkydory": "Example Mod Tab",
 
-  "block.hunkydory.example_block": "Example Block",
+  "block.hunkydory.stratus": "Stratus",
+  "block.hunkydory.smooth_stratus": "Smooth Stratus",
+  "block.hunkydory.polished_stratus": "Polished Stratus",
+  "block.hunkydory.stratus_bricks": "Stratus Bricks",
 
   "item.hunkydory.osmium_crystal": "Osmium Crystal",
   "item.hunkydory.raw_osmium": "Raw Osmium",
