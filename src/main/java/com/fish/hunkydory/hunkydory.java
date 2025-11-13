@@ -68,6 +68,7 @@ public class hunkydory {
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
         if(event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
             event.accept(ModItems.OSMIUM_CRYSTAL);
+            event.accept(ModItems.RAW_OSMIUM);
         }
     }
 

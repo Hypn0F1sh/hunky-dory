@@ -4,6 +4,7 @@
   "block.hunkydory.example_block": "Example Block",
 
   "item.hunkydory.osmium_crystal": "Osmium Crystal",
+  "item.hunkydory.raw_osmium": "Raw Osmium",
 
   "hunkydory.configuration.title": "hunky-dory Configs",
   "hunkydory.configuration.section.hunkydory.common.toml": "hunky-dory Configs",

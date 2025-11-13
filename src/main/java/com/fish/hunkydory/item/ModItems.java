@@ -12,6 +12,9 @@ public class ModItems {
     public static final DeferredItem<Item> OSMIUM_CRYSTAL = ITEMS.registerItem("osmium_crystal",
             Item::new, new Item.Properties());
 
+    public static final DeferredItem<Item> RAW_OSMIUM = ITEMS.registerItem("raw_osmium",
+            Item::new, new Item.Properties());
+
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
     }
