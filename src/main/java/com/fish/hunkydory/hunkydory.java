@@ -76,12 +76,17 @@ public class hunkydory {
         if(event.getTabKey() == CreativeModeTabs.NATURAL_BLOCKS) {
             event.accept(ModBlocks.STRATUS);
             event.accept(ModBlocks.SMOOTH_STRATUS);
+            event.accept(ModBlocks.OSMIUM_ORE);
         }
 
         if(event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS) {
             event.accept(ModBlocks.SMOOTH_STRATUS);
             event.accept(ModBlocks.POLISHED_STRATUS);
             event.accept(ModBlocks.STRATUS_BRICKS);
+        }
+
+        if(event.getTabKey() == CreativeModeTabs.TOOLS_AND_UTILITIES) {
+            event.accept(ModItems.LIGHTCASTER);
         }
     }
 

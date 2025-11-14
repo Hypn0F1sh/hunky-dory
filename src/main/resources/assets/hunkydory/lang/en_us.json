@@ -5,9 +5,11 @@
   "block.hunkydory.smooth_stratus": "Smooth Stratus",
   "block.hunkydory.polished_stratus": "Polished Stratus",
   "block.hunkydory.stratus_bricks": "Stratus Bricks",
+  "block.hunkydory.osmium_ore": "Osmium Ore",
 
   "item.hunkydory.osmium_crystal": "Osmium Crystal",
   "item.hunkydory.raw_osmium": "Raw Osmium",
+  "item.hunkydory.lightcaster": "Lightcaster",
 
   "hunkydory.configuration.title": "hunky-dory Configs",
   "hunkydory.configuration.section.hunkydory.common.toml": "hunky-dory Configs",

@@ -15,6 +15,9 @@ public class ModItems {
     public static final DeferredItem<Item> RAW_OSMIUM = ITEMS.registerItem("raw_osmium",
             Item::new, new Item.Properties());
 
+    public static final DeferredItem<Item> LIGHTCASTER = ITEMS.registerItem("lightcaster",
+            Item::new, new Item.Properties());
+
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
     }

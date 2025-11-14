@@ -31,6 +31,10 @@ public class ModBlocks {
             properties -> new Block(properties),BlockBehaviour.Properties.of()
                     .strength(6f).requiresCorrectToolForDrops().sound(SoundType.TUFF));
 
+    public static final DeferredBlock<Block> OSMIUM_ORE = registerBlock("osmium_ore",
+            properties -> new Block(properties),BlockBehaviour.Properties.of()
+                    .strength(6f).requiresCorrectToolForDrops().sound(SoundType.STONE));
+
     private static <T extends Block> DeferredBlock<T> registerBlock(String name, Function<BlockBehaviour.Properties, ? extends T> blockFactory, BlockBehaviour.Properties blockProperties) {
         DeferredBlock<T> block = BLOCKS.registerBlock(name, blockFactory, blockProperties);
         registerBlockItem(name, block);
