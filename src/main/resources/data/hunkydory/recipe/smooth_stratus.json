@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "ingredient": "hunkydory:stratus",
+  "result": {
+    "count": 1,
+    "id": "hunkydory:smooth_stratus"
+  },
+  "experience": 0,
+  "cookingtime": 200
+}

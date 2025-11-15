@@ -2,7 +2,9 @@ package com.fish.hunkydory.block;
 
 import com.fish.hunkydory.hunkydory;
 import com.fish.hunkydory.item.ModItems;
+import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.DropExperienceBlock;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.neoforged.bus.api.IEventBus;
@@ -32,7 +34,7 @@ public class ModBlocks {
                     .strength(6f).requiresCorrectToolForDrops().sound(SoundType.TUFF));
 
     public static final DeferredBlock<Block> OSMIUM_ORE = registerBlock("osmium_ore",
-            properties -> new Block(properties),BlockBehaviour.Properties.of()
+            properties -> new DropExperienceBlock(UniformInt.of(2, 8),properties),BlockBehaviour.Properties.of()
                     .strength(6f).requiresCorrectToolForDrops().sound(SoundType.STONE));
 
     private static <T extends Block> DeferredBlock<T> registerBlock(String name, Function<BlockBehaviour.Properties, ? extends T> blockFactory, BlockBehaviour.Properties blockProperties) {

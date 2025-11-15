@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:stonecutting",
+  "category": "misc",
+  "ingredient": "hunkydory:smooth_stratus",
+  "result": {
+    "id": "hunkydory:stratus_bricks",
+    "count": 1
+  }
+}

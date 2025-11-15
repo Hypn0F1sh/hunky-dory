@@ -1,0 +1,10 @@
+{
+  "replace": false,
+  "values": [
+    "hunkydory:stratus",
+    "hunkydory:smooth_stratus",
+    "hunkydory:polished_stratus",
+    "hunkydory:stratus_bricks",
+    "hunkydory:osmium_ore"
+  ]
+}
