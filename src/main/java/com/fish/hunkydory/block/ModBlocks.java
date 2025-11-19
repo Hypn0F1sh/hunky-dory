@@ -17,6 +17,7 @@ public class ModBlocks {
     public static final DeferredRegister.Blocks BLOCKS =
             DeferredRegister.createBlocks(hunkydory.MODID);
 
+
     public static final DeferredBlock<Block> STRATUS = registerBlock("stratus",
             properties -> new Block(properties),BlockBehaviour.Properties.of()
                     .strength(6f).requiresCorrectToolForDrops().sound(SoundType.TUFF));
@@ -36,6 +37,11 @@ public class ModBlocks {
     public static final DeferredBlock<Block> OSMIUM_ORE = registerBlock("osmium_ore",
             properties -> new DropExperienceBlock(UniformInt.of(2, 8),properties),BlockBehaviour.Properties.of()
                     .strength(6f).requiresCorrectToolForDrops().sound(SoundType.STONE));
+
+    public static final DeferredBlock<Block> OSMIUM_FORK = registerBlock("osmium_fork",
+            properties -> new Block(properties),BlockBehaviour.Properties.of()
+                    .strength(3f).sound(SoundType.NETHERITE_BLOCK));
+
 
     private static <T extends Block> DeferredBlock<T> registerBlock(String name, Function<BlockBehaviour.Properties, ? extends T> blockFactory, BlockBehaviour.Properties blockProperties) {
         DeferredBlock<T> block = BLOCKS.registerBlock(name, blockFactory, blockProperties);
