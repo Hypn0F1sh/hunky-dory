@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "hunkydory:dried_poppy",
+    "minecraft:honey_bottle",
+    "hunkydory:dried_poppy"
+  ],
+  "result": {
+    "id": "hunkydory:floral_ichor",
+    "count": 1
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category" : "misc",
+  "ingredients": [
+    "hunkydory:dried_poppy"
+  ],
+  "result": {
+    "id": "minecraft:red_dye",
+    "count": 2
+  }
+}

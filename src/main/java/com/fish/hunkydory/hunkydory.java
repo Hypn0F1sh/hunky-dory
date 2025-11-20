@@ -93,6 +93,10 @@ public class hunkydory {
         if(event.getTabKey() == CreativeModeTabs.REDSTONE_BLOCKS) {
             event.accept(ModBlocks.OSMIUM_FORK);
         }
+
+        if(event.getTabKey() == CreativeModeTabs.FOOD_AND_DRINKS) {
+            event.accept(ModItems.FLORAL_ICHOR);
+        }
     }
 
     // You can use SubscribeEvent and let the Event Bus discover methods to call
