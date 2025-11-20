@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "ingredient": "minecraft:poppy",
+  "result": {
+    "id": "hunkydory:dried_poppy"
+  },
+  "experience": 0,
+  "cookingtime": 50
+}

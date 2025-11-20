@@ -18,6 +18,9 @@ public class ModItems {
     public static final DeferredItem<Item> LIGHTCASTER = ITEMS.registerItem("lightcaster",
             Item::new, new Item.Properties());
 
+    public static final DeferredItem<Item> DRIED_POPPY = ITEMS.registerItem("dried_poppy",
+            Item::new, new Item.Properties());
+
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
     }

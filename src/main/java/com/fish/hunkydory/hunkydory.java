@@ -71,6 +71,7 @@ public class hunkydory {
         if(event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
             event.accept(ModItems.OSMIUM_CRYSTAL);
             event.accept(ModItems.RAW_OSMIUM);
+            event.accept(ModItems.DRIED_POPPY);
         }
 
         if(event.getTabKey() == CreativeModeTabs.NATURAL_BLOCKS) {
