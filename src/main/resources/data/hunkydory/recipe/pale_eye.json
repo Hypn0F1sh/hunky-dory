@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category" : "misc",
+  "ingredients": [
+    "hunkydory:active_dried_eyeblossom",
+    "hunkydory:active_dried_eyeblossom",
+    "minecraft:ender_eye"
+  ],
+  "result": {
+    "id": "hunkydory:pale_eye",
+    "count": 1
+  }
+}

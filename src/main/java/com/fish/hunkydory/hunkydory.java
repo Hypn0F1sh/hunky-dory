@@ -72,6 +72,12 @@ public class hunkydory {
             event.accept(ModItems.OSMIUM_CRYSTAL);
             event.accept(ModItems.RAW_OSMIUM);
             event.accept(ModItems.DRIED_POPPY);
+            event.accept(ModItems.DRIED_EYEBLOSSOM);
+            event.accept(ModItems.ACTIVE_DRIED_EYEBLOSSOM);
+            event.accept(ModItems.PALE_EYE);
+            event.accept(ModItems.FLORAL_ICHOR_POPPY);
+            event.accept(ModItems.FLORAL_ICHOR_EYEBLOSSOM_CLOSED);
+            event.accept(ModItems.FLORAL_ICHOR_EYEBLOSSOM_OPEN);
         }
 
         if(event.getTabKey() == CreativeModeTabs.NATURAL_BLOCKS) {
@@ -95,7 +101,9 @@ public class hunkydory {
         }
 
         if(event.getTabKey() == CreativeModeTabs.FOOD_AND_DRINKS) {
-            event.accept(ModItems.FLORAL_ICHOR);
+            event.accept(ModItems.FLORAL_ICHOR_POPPY);
+            event.accept(ModItems.FLORAL_ICHOR_EYEBLOSSOM_CLOSED);
+            event.accept(ModItems.FLORAL_ICHOR_EYEBLOSSOM_OPEN);
         }
     }
 

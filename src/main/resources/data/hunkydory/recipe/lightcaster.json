@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "c/c",
+    "S C",
+    "c/c"
+  ],
+  "key": {
+    "c": "minecraft:copper_ingot",
+    "/": "minecraft:stick",
+    "S": "minecraft:spyglass",
+    "C": "minecraft:copper_nugget"
+  },
+  "result": {
+    "id": "hunkydory:lightcaster",
+    "count": 1
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "temperature": 0.7,
+  "downfall": 10,
+  "has_precipitation": true,
+  "temperature_modifier": "none",
+  "effects": {
+    "sky_color": 13948116,
+    "fog_color": 12763842,
+    "water_color": 15592941,
+    "water_fog_color": 13948116,
+    "grass_color": 12763842,
+    "foliage_color": 16119285,
+    "dry_foliage_color": 6908265,
+    "grass_color_modifier": "none",
+    "music": [],
+    "music_volume": 0,
+    "particle": {
+      "options": {
+        "type": "minecraft:white_ash"
+      },
+      "probability": 1
+    }
+  },
+  "spawners": {
+    "ambient": [
+      {
+        "type": "minecraft:vex",
+        "weight": 1,
+        "minCount": 4,
+        "maxCount": 10
+      }
+    ]
+  },
+  "spawn_costs": {
+    "minecraft:vex": {
+      "energy_budget": 4,
+      "charge": 1
+    }
+  },
+  "carvers": [
+    "minecraft:canyon"
+  ],
+  "features": [
+    [
+      "minecraft:birch_tall",
+      "minecraft:patch_grass_jungle",
+      "minecraft:pale_garden_flowers"
+    ]
+  ]
+}

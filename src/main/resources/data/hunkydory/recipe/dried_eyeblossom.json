@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "ingredient": "minecraft:closed_eyeblossom",
+  "result": {
+    "id": "hunkydory:dried_eyeblossom"
+  },
+  "experience": 0,
+  "cookingtime": 50
+}

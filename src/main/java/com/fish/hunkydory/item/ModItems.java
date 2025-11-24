@@ -37,9 +37,19 @@ public class ModItems {
     public static final DeferredItem<Item> DRIED_POPPY = ITEMS.registerItem("dried_poppy",
             Item::new, new Item.Properties());
 
-    public static final DeferredItem<Item> FLORAL_ICHOR = ITEMS.register("floral_ichor", () -> new Item(new Item.Properties()
-            .setId(ResourceKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath(hunkydory.MODID, "floral_ichor")))
-            .food(ModFoodProperties.FLORAL_ICHOR)
+    public static final DeferredItem<Item> DRIED_EYEBLOSSOM = ITEMS.registerItem("dried_eyeblossom",
+            Item::new, new Item.Properties());
+
+    public static final DeferredItem<Item> ACTIVE_DRIED_EYEBLOSSOM = ITEMS.registerItem("active_dried_eyeblossom",
+            Item::new, new Item.Properties());
+
+    public static final DeferredItem<Item> PALE_EYE = ITEMS.registerItem("pale_eye",
+            Item::new, new Item.Properties());
+
+
+    public static final DeferredItem<Item> FLORAL_ICHOR_POPPY = ITEMS.register("floral_ichor_poppy", () -> new Item(new Item.Properties()
+            .setId(ResourceKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath(hunkydory.MODID, "floral_ichor_poppy")))
+            .food(ModFoodProperties.FLORAL_ICHOR_POPPY)
             .usingConvertsTo(Items.GLASS_BOTTLE)
             .component(
                     DataComponents.CONSUMABLE,
@@ -48,12 +58,37 @@ public class ModItems {
                             .animation(ItemUseAnimation.DRINK)
                             .sound(SoundEvents.HONEY_DRINK)
                             .hasConsumeParticles(false)
-                            .onConsume(new ApplyStatusEffectsConsumeEffect(new MobEffectInstance(MobEffects.BAD_OMEN, 6000, 0), 1.0f))
-                            .onConsume(new ApplyStatusEffectsConsumeEffect(new MobEffectInstance(MobEffects.UNLUCK, 6000, 10), .25f))
-                            .onConsume(new ApplyStatusEffectsConsumeEffect(new MobEffectInstance(MobEffects.BLINDNESS, 6000, 0), .10f))
-                            .onConsume(new ApplyStatusEffectsConsumeEffect(new MobEffectInstance(MobEffects.HUNGER, 6000, 10), .25f))
-                            .onConsume(new ApplyStatusEffectsConsumeEffect(new MobEffectInstance(MobEffects.SLOWNESS, 6000, 10), .10f))
-                            .onConsume(new ApplyStatusEffectsConsumeEffect(new MobEffectInstance(MobEffects.HEALTH_BOOST, 6000, 10), 1.0f))
+                            .onConsume(new ApplyStatusEffectsConsumeEffect(new MobEffectInstance(MobEffects.BAD_OMEN, 6000, 0), .05f))
+                            .build())
+    ));
+
+    public static final DeferredItem<Item> FLORAL_ICHOR_EYEBLOSSOM_CLOSED = ITEMS.register("floral_ichor_eyeblossom_closed", () -> new Item(new Item.Properties()
+            .setId(ResourceKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath(hunkydory.MODID, "floral_ichor_eyeblossom_closed")))
+            .food(ModFoodProperties.FLORAL_ICHOR_EYEBLOSSOM_CLOSED)
+            .usingConvertsTo(Items.GLASS_BOTTLE)
+            .component(
+                    DataComponents.CONSUMABLE,
+                    Consumable.builder()
+                            .consumeSeconds(2f)
+                            .animation(ItemUseAnimation.DRINK)
+                            .sound(SoundEvents.HONEY_DRINK)
+                            .hasConsumeParticles(false)
+                            .onConsume(new ApplyStatusEffectsConsumeEffect(new MobEffectInstance(MobEffects.BAD_OMEN, 6000, 0), .05f))
+                            .build())
+    ));
+
+    public static final DeferredItem<Item> FLORAL_ICHOR_EYEBLOSSOM_OPEN = ITEMS.register("floral_ichor_eyeblossom_open", () -> new Item(new Item.Properties()
+            .setId(ResourceKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath(hunkydory.MODID, "floral_ichor_eyeblossom_open")))
+            .food(ModFoodProperties.FLORAL_ICHOR_EYEBLOSSOM_OPEN)
+            .usingConvertsTo(Items.GLASS_BOTTLE)
+            .component(
+                    DataComponents.CONSUMABLE,
+                    Consumable.builder()
+                            .consumeSeconds(2f)
+                            .animation(ItemUseAnimation.DRINK)
+                            .sound(SoundEvents.HONEY_DRINK)
+                            .hasConsumeParticles(false)
+                            .onConsume(new ApplyStatusEffectsConsumeEffect(new MobEffectInstance(MobEffects.BAD_OMEN, 6000, 0), .05f))
                             .build())
     ));
 
