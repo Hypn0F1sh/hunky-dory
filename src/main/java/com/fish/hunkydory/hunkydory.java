@@ -78,6 +78,9 @@ public class hunkydory {
             event.accept(ModItems.FLORAL_ICHOR_POPPY);
             event.accept(ModItems.FLORAL_ICHOR_EYEBLOSSOM_CLOSED);
             event.accept(ModItems.FLORAL_ICHOR_EYEBLOSSOM_OPEN);
+            event.accept(ModItems.FLORAL_RESIN_POPPY);
+            event.accept(ModItems.FLORAL_RESIN_EYEBLOSSOM_CLOSED);
+            event.accept(ModItems.FLORAL_RESIN_EYEBLOSSOM_OPEN);
         }
 
         if(event.getTabKey() == CreativeModeTabs.NATURAL_BLOCKS) {

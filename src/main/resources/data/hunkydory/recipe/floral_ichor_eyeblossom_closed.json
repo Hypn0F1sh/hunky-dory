@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "hunkydory:dried_eyeblossom",
+    "minecraft:honey_bottle",
+    "hunkydory:dried_eyeblossom"
+  ],
+  "result": {
+    "id": "hunkydory:floral_ichor_eyeblossom_closed",
+    "count": 1
+  }
+}

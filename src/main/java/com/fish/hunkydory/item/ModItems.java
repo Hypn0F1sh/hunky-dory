@@ -51,14 +51,16 @@ public class ModItems {
             .setId(ResourceKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath(hunkydory.MODID, "floral_ichor_poppy")))
             .food(ModFoodProperties.FLORAL_ICHOR_POPPY)
             .usingConvertsTo(Items.GLASS_BOTTLE)
+            .stacksTo(16)
             .component(
                     DataComponents.CONSUMABLE,
                     Consumable.builder()
-                            .consumeSeconds(2f)
+                            .consumeSeconds(1f)
                             .animation(ItemUseAnimation.DRINK)
                             .sound(SoundEvents.HONEY_DRINK)
                             .hasConsumeParticles(false)
-                            .onConsume(new ApplyStatusEffectsConsumeEffect(new MobEffectInstance(MobEffects.BAD_OMEN, 6000, 0), .05f))
+                            .onConsume(new ApplyStatusEffectsConsumeEffect(new MobEffectInstance(MobEffects.HASTE, 1200, 5), .75f))
+                            .onConsume(new ApplyStatusEffectsConsumeEffect(new MobEffectInstance(MobEffects.MINING_FATIGUE, 1200, 5), .25f))
                             .build())
     ));
 
@@ -66,14 +68,16 @@ public class ModItems {
             .setId(ResourceKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath(hunkydory.MODID, "floral_ichor_eyeblossom_closed")))
             .food(ModFoodProperties.FLORAL_ICHOR_EYEBLOSSOM_CLOSED)
             .usingConvertsTo(Items.GLASS_BOTTLE)
+            .stacksTo(16)
             .component(
                     DataComponents.CONSUMABLE,
                     Consumable.builder()
-                            .consumeSeconds(2f)
+                            .consumeSeconds(1f)
                             .animation(ItemUseAnimation.DRINK)
                             .sound(SoundEvents.HONEY_DRINK)
                             .hasConsumeParticles(false)
-                            .onConsume(new ApplyStatusEffectsConsumeEffect(new MobEffectInstance(MobEffects.BAD_OMEN, 6000, 0), .05f))
+                            .onConsume(new ApplyStatusEffectsConsumeEffect(new MobEffectInstance(MobEffects.REGENERATION, 1200, 5), .75f))
+                            .onConsume(new ApplyStatusEffectsConsumeEffect(new MobEffectInstance(MobEffects.POISON, 1200, 5), .25f))
                             .build())
     ));
 
@@ -81,16 +85,25 @@ public class ModItems {
             .setId(ResourceKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath(hunkydory.MODID, "floral_ichor_eyeblossom_open")))
             .food(ModFoodProperties.FLORAL_ICHOR_EYEBLOSSOM_OPEN)
             .usingConvertsTo(Items.GLASS_BOTTLE)
+            .stacksTo(16)
             .component(
                     DataComponents.CONSUMABLE,
                     Consumable.builder()
-                            .consumeSeconds(2f)
+                            .consumeSeconds(1f)
                             .animation(ItemUseAnimation.DRINK)
                             .sound(SoundEvents.HONEY_DRINK)
                             .hasConsumeParticles(false)
-                            .onConsume(new ApplyStatusEffectsConsumeEffect(new MobEffectInstance(MobEffects.BAD_OMEN, 6000, 0), .05f))
+                            .onConsume(new ApplyStatusEffectsConsumeEffect(new MobEffectInstance(MobEffects.INSTANT_HEALTH, 1, 5), 1f))
+                            .onConsume(new ApplyStatusEffectsConsumeEffect(new MobEffectInstance(MobEffects.INSTANT_DAMAGE, 1, 5), .125f))
                             .build())
     ));
+
+    public static final DeferredItem<Item> FLORAL_RESIN_POPPY = ITEMS.registerItem("floral_resin_poppy",
+            Item::new, new Item.Properties());
+    public static final DeferredItem<Item> FLORAL_RESIN_EYEBLOSSOM_CLOSED = ITEMS.registerItem("floral_resin_eyeblossom_closed",
+            Item::new, new Item.Properties());
+    public static final DeferredItem<Item> FLORAL_RESIN_EYEBLOSSOM_OPEN = ITEMS.registerItem("floral_resin_eyeblossom_open",
+            Item::new, new Item.Properties());
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
