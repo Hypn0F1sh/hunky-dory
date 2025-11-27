@@ -17,10 +17,10 @@ public class ModEffects {
 
     public static final Holder<MobEffect> BAD_FEELING_EFFECT = MOB_EFFECTS.register("bad_feeling",
             () -> new BadFeelingEffect(MobEffectCategory.HARMFUL, 0x441f63)
-                    .addAttributeModifier(Attributes.GRAVITY,
-                            ResourceLocation.fromNamespaceAndPath(hunkydory.MODID, "bad_feeling"), 0.05f,
+                    .addAttributeModifier(Attributes.BLOCK_BREAK_SPEED,
+                            ResourceLocation.fromNamespaceAndPath(hunkydory.MODID, "bad_feeling"), -0.05f,
                             AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL)
-                    .addAttributeModifier(Attributes.MOVEMENT_SPEED,
+                    .addAttributeModifier(Attributes.BLOCK_INTERACTION_RANGE,
                             ResourceLocation.fromNamespaceAndPath(hunkydory.MODID, "bad_feeling"), -0.05f,
                             AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL));
 

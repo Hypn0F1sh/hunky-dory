@@ -43,8 +43,8 @@ public class ModBlocks {
                     .strength(3f).sound(SoundType.NETHERITE_BLOCK));
 
 
-    private static <T extends Block> DeferredBlock<T> registerBlock(String name, Function<BlockBehaviour.Properties, ? extends T> blockFactory, BlockBehaviour.Properties blockProperties) {
-        DeferredBlock<T> block = BLOCKS.registerBlock(name, blockFactory, blockProperties);
+    private static <B extends Block> DeferredBlock<B> registerBlock(String name, Function<BlockBehaviour.Properties, ? extends B> blockFactory, BlockBehaviour.Properties blockProperties) {
+        DeferredBlock<B> block = BLOCKS.registerBlock(name, blockFactory, blockProperties);
         registerBlockItem(name, block);
         return block;
     }
