@@ -1,6 +1,7 @@
 package com.fish.hunkydory;
 
 import com.fish.hunkydory.block.ModBlocks;
+import com.fish.hunkydory.effect.ModEffects;
 import com.fish.hunkydory.item.ModItems;
 import org.slf4j.Logger;
 
@@ -54,6 +55,8 @@ public class hunkydory {
 
         ModItems.ITEMS.register(modEventBus);
         ModBlocks.BLOCKS.register(modEventBus);
+
+        ModEffects.MOB_EFFECTS.register(modEventBus);
 
         // Register the item to a creative tab
         modEventBus.addListener(this::addCreative);

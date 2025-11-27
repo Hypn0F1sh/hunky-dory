@@ -1,5 +1,6 @@
 package com.fish.hunkydory.item;
 
+import com.fish.hunkydory.effect.ModEffects;
 import com.fish.hunkydory.hunkydory;
 import com.fish.hunkydory.item.custom.ModFoodProperties;
 import net.minecraft.client.resources.sounds.Sound;
@@ -61,6 +62,7 @@ public class ModItems {
                             .hasConsumeParticles(false)
                             .onConsume(new ApplyStatusEffectsConsumeEffect(new MobEffectInstance(MobEffects.HASTE, 1200, 5), .75f))
                             .onConsume(new ApplyStatusEffectsConsumeEffect(new MobEffectInstance(MobEffects.MINING_FATIGUE, 1200, 5), .25f))
+                            .onConsume(new ApplyStatusEffectsConsumeEffect(new MobEffectInstance(ModEffects.BAD_FEELING_EFFECT, 1200, 1), .10f))
                             .build())
     ));
 
@@ -78,6 +80,7 @@ public class ModItems {
                             .hasConsumeParticles(false)
                             .onConsume(new ApplyStatusEffectsConsumeEffect(new MobEffectInstance(MobEffects.REGENERATION, 1200, 5), .75f))
                             .onConsume(new ApplyStatusEffectsConsumeEffect(new MobEffectInstance(MobEffects.POISON, 1200, 5), .25f))
+                            .onConsume(new ApplyStatusEffectsConsumeEffect(new MobEffectInstance(ModEffects.BAD_FEELING_EFFECT, 1200, 1), .10f))
                             .build())
     ));
 
@@ -95,6 +98,7 @@ public class ModItems {
                             .hasConsumeParticles(false)
                             .onConsume(new ApplyStatusEffectsConsumeEffect(new MobEffectInstance(MobEffects.INSTANT_HEALTH, 1, 5), 1f))
                             .onConsume(new ApplyStatusEffectsConsumeEffect(new MobEffectInstance(MobEffects.INSTANT_DAMAGE, 1, 5), .125f))
+                            .onConsume(new ApplyStatusEffectsConsumeEffect(new MobEffectInstance(ModEffects.BAD_FEELING_EFFECT, 1200, 1), .10f))
                             .build())
     ));
 

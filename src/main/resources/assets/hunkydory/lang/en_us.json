@@ -22,6 +22,8 @@
   "item.hunkydory.floral_resin_eyeblossom_open": "Floral Resin",
   "item.hunkydory.pale_eye": "Pale Eye",
 
+  "effect.hunkydory.bad_feeling": "Bad Feeling",
+
   "hunkydory.configuration.title": "hunky-dory Configs",
   "hunkydory.configuration.section.hunkydory.common.toml": "hunky-dory Configs",
   "hunkydory.configuration.section.hunkydory.common.toml.title": "hunky-dory Configs",
