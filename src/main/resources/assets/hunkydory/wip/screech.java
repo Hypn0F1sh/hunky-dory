@@ -3,7 +3,7 @@
 // Paste this class into your mod and generate all required imports
 
 
-public class The Screech<T extends Entity> extends EntityModel<T> {
+public class the_screech<T extends Entity> extends EntityModel<T> {
 	// This layer location should be baked with EntityRendererProvider.Context in the entity renderer and passed into this model's constructor
 	public static final ModelLayerLocation LAYER_LOCATION = new ModelLayerLocation(new ResourceLocation("modid", "the_screech"), "main");
 	private final ModelPart Head;
@@ -13,7 +13,7 @@ public class The Screech<T extends Entity> extends EntityModel<T> {
 	private final ModelPart LeftLeg;
 	private final ModelPart RightLeg;
 
-	public The Screech(ModelPart root) {
+	public the_screech(ModelPart root) {
 		this.Head = root.getChild("Head");
 		this.Torso = root.getChild("Torso");
 		this.LeftArm = root.getChild("LeftArm");
