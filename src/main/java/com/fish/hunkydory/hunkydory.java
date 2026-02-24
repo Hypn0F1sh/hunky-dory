@@ -5,6 +5,10 @@ import com.fish.hunkydory.block.ModBlocks;
 import com.fish.hunkydory.effect.ModEffects;
 import com.fish.hunkydory.item.ModItems;
 import net.minecraft.world.entity.EntityType;
+import net.minecraft.world.item.ItemStack;
+import net.neoforged.api.distmarker.Dist;
+import net.neoforged.fml.common.EventBusSubscriber;
+import net.neoforged.neoforge.capabilities.RegisterCapabilitiesEvent;
 import net.neoforged.neoforge.event.entity.EntityAttributeModificationEvent;
 import org.slf4j.Logger;
 
@@ -20,6 +24,9 @@ import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.neoforged.neoforge.common.NeoForge;
 import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent;
 import net.neoforged.neoforge.event.server.ServerStartingEvent;
+import top.theillusivec4.curios.api.CuriosCapability;
+import top.theillusivec4.curios.api.SlotContext;
+import top.theillusivec4.curios.api.type.capability.ICurio;
 
 // The value here should match an entry in the META-INF/neoforge.mods.toml file
 @Mod(hunkydory.MODID)
@@ -54,6 +61,24 @@ public class hunkydory {
         modContainer.registerConfig(ModConfig.Type.COMMON, Config.SPEC);
     }
 
+    public void registerCapabilities(final RegisterCapabilitiesEvent evt) {
+        evt.registerItem(
+                CuriosCapability.ITEM,
+                (stack, context) -> new ICurio() {
+
+                    @Override
+                    public ItemStack getStack() {
+                        return stack;
+                    }
+
+                    @Override
+                    public void curioTick(SlotContext slotContext) {
+                        // ticking logic here
+                    }
+                },
+                ModItems.RUNE_GLOVE
+        );
+    }
     private void commonSetup(FMLCommonSetupEvent event) {
 
     }
@@ -89,6 +114,7 @@ public class hunkydory {
 
         if(event.getTabKey() == CreativeModeTabs.TOOLS_AND_UTILITIES) {
             event.accept(ModItems.LIGHTCASTER);
+            event.accept(ModItems.RUNE_GLOVE);
         }
 
         if(event.getTabKey() == CreativeModeTabs.REDSTONE_BLOCKS) {
@@ -101,14 +127,6 @@ public class hunkydory {
             event.accept(ModItems.FLORAL_ICHOR_EYEBLOSSOM_OPEN);
         }
     }
-
-    //@SubscribeEvent
-    //public static void modifyDefaultAttributes(EntityAttributeModificationEvent event) {
-    //    event.add(
-    //            EntityType.PLAYER,
-    //            ModAttributes.HAS_ARM
-    //    );
-    //}
 
     @SubscribeEvent
     public void onServerStarting(ServerStartingEvent event) {

@@ -43,6 +43,9 @@ public class ModItems {
     public static final DeferredItem<Item> PALE_EYE = ITEMS.registerItem("pale_eye",
             Item::new, new Item.Properties());
 
+    public static final DeferredItem<Item> RUNE_GLOVE = ITEMS.registerItem("rune_glove",
+            Item::new, new Item.Properties());
+
 
     public static final DeferredItem<Item> FLORAL_ICHOR_POPPY = ITEMS.register("floral_ichor_poppy", () -> new Item(new Item.Properties()
             .setId(ResourceKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath(hunkydory.MODID, "floral_ichor_poppy")))
