@@ -2,6 +2,8 @@ package com.fish.hunkydory.item;
 
 import com.fish.hunkydory.effect.ModEffects;
 import com.fish.hunkydory.hunkydory;
+import com.fish.hunkydory.item.curio.HunkydoryCurio;
+import com.fish.hunkydory.item.curio.glove.RuneGloveCurio;
 import com.fish.hunkydory.item.custom.ModFoodProperties;
 import net.minecraft.core.component.DataComponents;
 import net.minecraft.core.registries.Registries;
@@ -44,7 +46,7 @@ public class ModItems {
             Item::new, new Item.Properties());
 
     public static final DeferredItem<Item> RUNE_GLOVE = ITEMS.registerItem("rune_glove",
-            Item::new, new Item.Properties());
+            RuneGloveCurio::new);
 
 
     public static final DeferredItem<Item> FLORAL_ICHOR_POPPY = ITEMS.register("floral_ichor_poppy", () -> new Item(new Item.Properties()

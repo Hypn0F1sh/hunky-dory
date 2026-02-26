@@ -122,4 +122,8 @@ public class hunkydory {
     public void onServerStarting(ServerStartingEvent event) {
 
     }
+
+    public static ResourceLocation hunkydoryPath(String path) {
+        return ResourceLocation.fromNamespaceAndPath(MODID, path);
+    }
 }
