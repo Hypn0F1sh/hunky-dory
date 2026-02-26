@@ -14,7 +14,7 @@ import top.theillusivec4.curios.api.type.capability.ICurioItem;
 public class HunkydoryCurio extends Item implements ICurioItem {
 
     public HunkydoryCurio(Item.Properties properties) {
-        super(new Item.Properties().stacksTo(1).durability(0));
+        super(properties);
     }
 
     public void addAttributeModifiers(Multimap<Holder<Attribute>, AttributeModifier> map, SlotContext slotContext, ItemStack stack) {

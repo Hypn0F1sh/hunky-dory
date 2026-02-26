@@ -46,7 +46,7 @@ public class ModItems {
             Item::new, new Item.Properties());
 
     public static final DeferredItem<Item> RUNE_GLOVE = ITEMS.registerItem("rune_glove",
-            RuneGloveCurio::new);
+            RuneGloveCurio::new, props -> props.stacksTo(1).durability(0));
 
 
     public static final DeferredItem<Item> FLORAL_ICHOR_POPPY = ITEMS.register("floral_ichor_poppy", () -> new Item(new Item.Properties()
