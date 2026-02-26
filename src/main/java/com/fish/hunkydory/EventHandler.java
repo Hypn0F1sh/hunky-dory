@@ -15,7 +15,7 @@ public class EventHandler {
     public static void modifyDefaultAttributes(EntityAttributeModificationEvent event) {
         event.add(
                 EntityType.PLAYER,
-                ModAttributes.HAS_ARM
+                ModAttributes.RUNE_GLOVE
         );
     }
 }

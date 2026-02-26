@@ -12,7 +12,7 @@ public class ModAttributes {
     public static final DeferredRegister<Attribute> ATTRIBUTES = DeferredRegister.create(
             BuiltInRegistries.ATTRIBUTE, hunkydory.MODID);
 
-    public static final Holder<Attribute> HAS_ARM = ATTRIBUTES.register("has_arm", () -> new BooleanAttribute(
+    public static final Holder<Attribute> RUNE_GLOVE = ATTRIBUTES.register("has_arm", () -> new BooleanAttribute(
             "attributes.yourmodid.has_arm",
             false));
 
