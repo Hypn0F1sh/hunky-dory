@@ -13,7 +13,7 @@ public class ModKeys {
 
     public static final KeyMapping USE_RUNES = new KeyMapping(
         "key.hunkydory.use_runes",
-        KeyConflictContext.IN_GAME,
+        KeyConflictContext.UNIVERSAL,
         InputConstants.Type.KEYSYM,
         GLFW.GLFW_KEY_R,
         HUNKYDORY_CATEGORY

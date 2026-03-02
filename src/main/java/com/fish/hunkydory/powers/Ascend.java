@@ -13,7 +13,7 @@ public class Ascend {
     public static final int maxTerrainDistance = 512;
     public static final Block[] invalidBlocks = {Blocks.BEDROCK};
 
-    public void activate(Level world, LivingEntity user) {
+    public static void activate(Level world, LivingEntity user) {
         if (preview(world, user)) {
             doAscend(checkValid(world, user), user);
         }

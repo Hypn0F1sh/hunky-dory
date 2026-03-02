@@ -1,7 +1,15 @@
 package com.fish.hunkydory;
 
+import ca.weblite.objc.Client;
+import com.fish.hunkydory.powers.Ascend;
 import net.minecraft.client.KeyMapping;
 import net.minecraft.client.Minecraft;
+import net.minecraft.client.player.LocalPlayer;
+import net.minecraft.server.level.ServerLevel;
+import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.level.Level;
+import net.minecraft.world.level.LevelAccessor;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.ModContainer;
@@ -42,8 +50,9 @@ public class hunkydoryClient {
 
     @SubscribeEvent // on the game event bus only on the physical client
     public static void onClientTick(ClientTickEvent.Post event) {
-        while (KeyMapping.get("key.hunkydory.use_runes").consumeClick()) {
-            println("R");
+        while (ModKeys.USE_RUNES.consumeClick()) {
+            System.out.println("R");
+            //Ascend.activate();
         }
     }
 }
