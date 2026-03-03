@@ -52,7 +52,7 @@ public class hunkydoryClient {
     public static void onClientTick(ClientTickEvent.Post event) {
         while (ModKeys.USE_RUNES.consumeClick()) {
             System.out.println("R");
-            //Ascend.activate();
+            Ascend.activate(Minecraft.getInstance().level, Minecraft.getInstance().player);
         }
     }
 }
