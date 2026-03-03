@@ -123,6 +123,6 @@ public class hunkydory {
     }
 
     public static ResourceLocation hunkydoryPath(String path) {
-        return ResourceLocation.fromNamespaceAndPath(MODID, path);
+        return ResourceLocation.fromNamespaceAndPath("hunkydory", path);
     }
 }

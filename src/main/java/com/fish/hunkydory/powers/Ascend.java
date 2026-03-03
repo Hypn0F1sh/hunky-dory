@@ -5,6 +5,7 @@ import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.phys.Vec3;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 
 
@@ -64,9 +65,11 @@ public class Ascend {
     }
 
     public static void doAscend(int[] data, LivingEntity user) {
-        BlockPos userPos = user.getOnPos();
-        System.out.println(Integer.toString(userPos.getX()) + " " + Integer.toString(userPos.above(data[1]+data[2]).getY()) + " " + Integer.toString(userPos.getZ()));
-        //user.teleportTo(userPos.getX(), userPos.above(data[1]+data[2]).getY(), userPos.getZ());
-        user.setPos(userPos.getX()+0.5, userPos.above(data[1]+data[2]).getY()+1, userPos.getZ()+0.5);
+        BlockPos userPos = user.getOnPos().above(1);
+        moveTo(new Vec3(userPos.getX()+0.5, userPos.above(data[1]+data[2]).getY(), userPos.getZ()+0.5),user);
+    }
+
+    public static void moveTo(Vec3 pos, LivingEntity user) {
+        user.setPos(pos);
     }
 }
