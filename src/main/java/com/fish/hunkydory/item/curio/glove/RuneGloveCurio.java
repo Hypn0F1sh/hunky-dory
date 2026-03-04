@@ -3,16 +3,10 @@ package com.fish.hunkydory.item.curio.glove;
 import com.fish.hunkydory.attribute.ModAttributes;
 import com.fish.hunkydory.hunkydory;
 import com.fish.hunkydory.item.curio.HunkydoryCurio;
-import com.google.common.collect.Multimap;
-import net.minecraft.core.Holder;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.world.entity.ai.attributes.Attribute;
 import net.minecraft.world.entity.ai.attributes.AttributeModifier;
-import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.item.ItemStack;
 import top.theillusivec4.curios.api.CurioAttributeModifiers;
-import top.theillusivec4.curios.api.CuriosApi;
-import top.theillusivec4.curios.api.SlotContext;
 
 public class RuneGloveCurio extends HunkydoryCurio {
 
