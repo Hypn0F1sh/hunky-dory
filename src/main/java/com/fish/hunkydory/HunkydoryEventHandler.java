@@ -5,14 +5,11 @@ import net.minecraft.world.entity.EntityType;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.fml.common.Mod;
-import net.neoforged.neoforge.client.event.ClientTickEvent;
 import net.neoforged.neoforge.event.entity.EntityAttributeModificationEvent;
-
-import static java.sql.DriverManager.println;
 
 @Mod(hunkydory.MODID)
 @EventBusSubscriber
-public class EventHandler {
+public class HunkydoryEventHandler {
 
     @SubscribeEvent // on the mod event bus
     public static void modifyDefaultAttributes(EntityAttributeModificationEvent event) {

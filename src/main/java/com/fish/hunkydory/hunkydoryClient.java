@@ -51,7 +51,6 @@ public class hunkydoryClient {
     @SubscribeEvent // on the game event bus only on the physical client
     public static void onClientTick(ClientTickEvent.Post event) {
         while (ModKeys.USE_RUNES.consumeClick()) {
-            System.out.println("R");
             Ascend.activate(Minecraft.getInstance().level, Minecraft.getInstance().player);
         }
     }

@@ -3,6 +3,8 @@ package com.fish.hunkydory;
 import com.fish.hunkydory.attribute.ModAttributes;
 import com.fish.hunkydory.block.ModBlocks;
 import com.fish.hunkydory.effect.ModEffects;
+import com.fish.hunkydory.event.moveLerpEvent.LerpMovementTask;
+import com.fish.hunkydory.event.moveLerpEvent.PlayerLerpMoveEvent;
 import com.fish.hunkydory.item.ModItems;
 import com.google.common.collect.LinkedHashMultimap;
 import com.google.common.collect.Multimap;
@@ -67,6 +69,8 @@ public class hunkydory {
 
         // Register our mod's ModConfigSpec so that FML can create and load the config file for us
         modContainer.registerConfig(ModConfig.Type.COMMON, Config.SPEC);
+
+
     }
 
     private void commonSetup(FMLCommonSetupEvent event) {
