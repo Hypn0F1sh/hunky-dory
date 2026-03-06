@@ -1,7 +1,10 @@
 package com.fish.hunkydory.powers;
 
 import com.fish.hunkydory.event.moveLerpEvent.PlayerLerpMoveEvent;
+import com.fish.hunkydory.hunkydory;
+import net.minecraft.client.Minecraft;
 import net.minecraft.core.BlockPos;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
@@ -71,5 +74,21 @@ public class Ascend {
                         new Vec3(userPos.getX()+0.5, userPos.above(data[1]+data[2]).getY()+0.15, userPos.getZ()+0.5),
                         Math.max(60, data[1]*4 + data[2]*4))
         );
+    }
+
+    public static void setOverlayShader(Player player, boolean set) {
+        Minecraft mc = Minecraft.getInstance();
+
+        if (set) {
+            try {
+                mc.gameRenderer.setPostEffect(
+                        hunkydory.hunkydoryPath("test")
+                );
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        } else  {
+            mc.gameRenderer.clearPostEffect();
+        }
     }
 }

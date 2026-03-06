@@ -1,0 +1,10 @@
+{
+  "targets": ["minecraft:main"],
+  "passes": [
+    {
+      "name": "ascend",
+      "intarget": "minecraft:main",
+      "outtarget": "minecraft:main"
+    }
+  ]
+}

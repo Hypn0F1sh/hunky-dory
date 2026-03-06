@@ -1,6 +1,7 @@
 package com.fish.hunkydory.event.moveLerpEvent;
 
 import com.fish.hunkydory.hunkydory;
+import com.fish.hunkydory.powers.Ascend;
 import com.mojang.blaze3d.systems.RenderSystem;
 import net.minecraft.client.Minecraft;
 import net.minecraft.world.damagesource.DamageTypes;
@@ -57,11 +58,14 @@ public class MoveLerpEventHandler {
 
         if (Math.abs(task.duration - task.elapsed) <= 0.5) {
             ACTIVE_LERP.remove(player.getUUID());
+            //Ascend.setOverlayShader(player, false);
         }
 
         if (task.duration - task.elapsed <= 20) {
             task.elapsed += (float) ((task.duration - task.elapsed)*0.05);
         } else task.elapsed++;
+
+        //Ascend.setOverlayShader(player, overlay);
     }
 
     @SubscribeEvent
@@ -77,12 +81,5 @@ public class MoveLerpEventHandler {
     @SubscribeEvent
     public static void onAttack(AttackEntityEvent event) {
         event.setCanceled(overlay);
-    }
-
-    @SubscribeEvent
-    public static void renderOverlay(RenderGuiEvent.Post event) {
-        Minecraft mc = Minecraft.getInstance();
-
-        if (!overlay) return;
     }
 }
