@@ -8,7 +8,7 @@ public class LerpMovementTask {
     public Vec3 start;
     public Vec3 end;
     public int duration;
-    public int elapsed;
+    public float elapsed;
 
     public LerpMovementTask(Vec3 start, Vec3 end, int duration) {
         this.start = start;

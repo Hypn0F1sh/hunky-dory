@@ -12,7 +12,7 @@ import net.neoforged.neoforge.common.NeoForge;
 
 public class Ascend {
 
-    public static final int maxCeilingDistance = 6;
+    public static final int maxCeilingDistance = 8;
     public static final int maxTerrainDistance = 512;
     public static final Block[] invalidBlocks = {Blocks.BEDROCK, Blocks.OBSIDIAN};
 
@@ -68,7 +68,7 @@ public class Ascend {
                 new PlayerLerpMoveEvent(
                         user,
                         user.getPosition(0),
-                        new Vec3(userPos.getX()+0.5, userPos.above(data[1]+data[2]).getY()+0.25, userPos.getZ()+0.5),
+                        new Vec3(userPos.getX()+0.5, userPos.above(data[1]+data[2]).getY()+0.15, userPos.getZ()+0.5),
                         Math.max(60, data[1]*4 + data[2]*4))
         );
     }
